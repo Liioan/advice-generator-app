@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+
+html,
+body {
+  font-size: 10px;
+}
+
+.App {
+  background: url('../assets/images/bg-main-desktop.png') no-repeat;
+  background-size: contain;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+@media screen and (max-width: 1250px) {
+  .App {
+    background-image: url('../assets/images/bg-main-mobile.png');
+    background-size: 100vw 50vh;
+    flex-wrap: wrap;
+    height: auto;
+  }
+}
