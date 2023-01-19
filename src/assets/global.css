@@ -29,3 +29,19 @@ body {
   position: relative;
   background-color: var(--dark-blue);
 }
+
+.attribution {
+  position: absolute;
+  bottom: 2rem;
+  color: var(--gray-blue);
+}
+
+.attribution a {
+  color: var(--light-cyan);
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.attribution a:hover {
+  color: var(--neon-green);
+}
