@@ -1,7 +1,9 @@
 .card {
   max-width: 50rem;
+  min-width: 35rem;
   width: 70vw;
   min-height: 30rem;
+  height: auto;
   background-color: var(--dark-gray-blue);
   display: flex;
   justify-content: start;
@@ -11,6 +13,7 @@
   gap: 3rem;
   position: relative;
   border-radius: 1.5rem;
+  box-shadow: 0.5rem 0.5rem 10rem 0 rgba(0, 0, 0, 0.2);
 }
 
 .advice {
@@ -63,7 +66,18 @@
 
 .disabled {
   background-color: var(--gray-blue) !important;
+  cursor: default !important;
 }
 .disabled:hover {
   box-shadow: none !important;
+}
+
+@media screen and (max-width: 55rem) {
+  .adviceText {
+    font-size: 1.5rem !important;
+  }
+
+  .card button:hover {
+    box-shadow: none;
+  }
 }

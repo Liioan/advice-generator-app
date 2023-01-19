@@ -12,6 +12,7 @@ import Dice from '../../assets/dice.svg';
 export default function Card() {
   const [data, setData] = useState({ advice: '', id: '' });
   const [isLoading, setIsLoading] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 685);
 
   const fetchData = async () => {
     const res = await fetch('https://api.adviceslip.com/advice');
@@ -32,6 +33,10 @@ export default function Card() {
     }, 2000);
   };
 
+  window.addEventListener('resize', () => {
+    setIsMobile(window.innerWidth < 685);
+  });
+
   return (
     <main className={styles.card}>
       <div className={styles.advice}>
@@ -51,7 +56,7 @@ export default function Card() {
           )}
         </AnimatePresence>
       </div>
-      <img src={DesktopDevider} alt='' />
+      <img src={isMobile ? MobileDevider : DesktopDevider} alt='' />
       <button
         onClick={handleClick}
         className={isLoading ? styles.disabled : ''}
