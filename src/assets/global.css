@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+@import url('./variables.css');
+
 *,
 *::before,
 *::after {
@@ -14,20 +16,10 @@ body {
 }
 
 .App {
-  background: url('../assets/images/bg-main-desktop.png') no-repeat;
-  background-size: contain;
   height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   position: relative;
-}
-
-@media screen and (max-width: 1250px) {
-  .App {
-    background-image: url('../assets/images/bg-main-mobile.png');
-    background-size: 100vw 50vh;
-    flex-wrap: wrap;
-    height: auto;
-  }
+  background-color: var(--dark-blue);
 }
