@@ -21,6 +21,11 @@ body {
   font-size: 10px;
 }
 
+::selection {
+  background-color: var(--neon-green);
+  color: var(--dark-blue);
+}
+
 .App {
   height: 100vh;
   display: flex;
